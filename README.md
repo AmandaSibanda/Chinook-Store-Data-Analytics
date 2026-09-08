@@ -12,7 +12,7 @@ Insights and recommendations are provided on the following key areas:
 * **Category 4: Sample Size Distribution & Statistical Reliability**
 
 
-* Targeted SQL queries regarding various business questions can be found here:
+* Targeted SQL queries regarding various business questions can be found here: [ SQL ]
 * An interactive Tableau dashboard used to report and explore sales trends can be found here: `[Link to Tableau Public Dashboard]`
 
 ---
