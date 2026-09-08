@@ -1,0 +1,102 @@
+-- ====================================================================
+-- Chinook Store: Genre Revenue & Marketing Investment Analysis
+-- Database: PostgreSQL
+-- Description: End-to-end SQL queries inspecting volume, revenue, 
+--              pricing, and customer metrics by genre.
+-- ====================================================================
+
+
+-- --------------------------------------------------------------------
+-- STEP 1A: Tracks per Genre (Inventory Volume)
+-- --------------------------------------------------------------------
+select
+    g.name as genre,
+    count(t.track_id) as TrackCount
+from genre g
+left join track t on g.genre_id = t.genre_id
+group by g.name
+order by TrackCount desc;
+
+
+-- --------------------------------------------------------------------
+-- STEP 1B: Total Invoices and Unique Customers Overview
+-- --------------------------------------------------------------------
+select
+    count(distinct invoice_id) as Invoices,
+    count(distinct customer_id) as Customers
+from invoice;
+
+
+-- --------------------------------------------------------------------
+-- STEP 2: Total Revenue by Genre
+-- --------------------------------------------------------------------
+select
+    g.name as genre,
+    sum(il.unit_price * il.quantity) as TotalRevenue,
+    sum(il.quantity) as TracksSold,
+    count(distinct i.customer_id) as UniqueCustomers
+from genre g
+join track t on g.genre_id = t.genre_id
+join invoice_line il on t.track_id = il.track_id
+join invoice i on il.invoice_id = i.invoice_id
+group by g.name
+order by TotalRevenue desc;
+
+
+-- --------------------------------------------------------------------
+-- STEP 3: Revenue per Customer (Customer Spend Normalization)
+-- --------------------------------------------------------------------
+select
+    g.name as genre,
+    count(distinct i.customer_id) as UniqueCustomers,
+    sum(il.quantity) as TracksSold,
+    round(
+        sum(il.unit_price * il.quantity) * 1.0 / count(distinct i.customer_id),
+        2
+    ) as RevenuePerCustomer
+from genre g
+join track t on g.genre_id = t.genre_id
+join invoice_line il on t.track_id = il.track_id
+join invoice i on il.invoice_id = i.invoice_id
+group by g.name
+order by RevenuePerCustomer desc;
+
+
+-- --------------------------------------------------------------------
+-- STEP 4: Price Point Check (Unit Price Validation)
+-- --------------------------------------------------------------------
+select
+    g.name as genre,
+    round(avg(il.unit_price), 2) as AvgPrice,
+    sum(il.quantity) as TracksSold,
+    count(distinct i.customer_id) as UniqueCustomers,
+    round(
+        sum(il.unit_price * il.quantity) * 1.0 / count(distinct i.customer_id),
+        2
+    ) as RevenuePerCustomer
+from genre g
+join track t on g.genre_id = t.genre_id
+join invoice_line il on t.track_id = il.track_id
+join invoice i on il.invoice_id = i.invoice_id
+group by g.name
+order by RevenuePerCustomer desc;
+
+
+-- --------------------------------------------------------------------
+-- STEP 5: Sample Size Check (< 25 Customers)
+-- --------------------------------------------------------------------
+select
+    g.name as genre,
+    count(distinct i.customer_id) as UniqueCustomers,
+    count(il.invoice_line_id) as TracksSold,
+    round(
+        sum(il.unit_price * il.quantity) * 1.0 / count(distinct i.customer_id),
+        2
+    ) as RevenuePerCustomer
+from genre g
+join track t on g.genre_id = t.genre_id
+join invoice_line il on t.track_id = il.track_id
+join invoice i on il.invoice_id = i.invoice_id
+group by g.name
+having count(distinct i.customer_id) < 25
+order by RevenuePerCustomer desc;
