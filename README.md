@@ -1,13 +1,13 @@
 # 🎵 Chinook Store: Genre Revenue & Marketing Investment Analysis
 
 ## Project Background
-As a Data Analyst at **Chinook**, a global digital media retailer offering digital tracks and video content, I conducted an end-to-end sales analysis to optimize our upcoming marketing budget allocation. Operating in the digital entertainment industry, Chinook relies on a direct-to-consumer e-commerce model where customers purchase individual tracks and media items. Key performance indicators (KPIs) for our business include **Gross Revenue**, **Units Sold**, **Active Unique Customers**, and **Revenue per Customer**.
+As a Data Analyst at **Chinook**, a global digital media retailer offering digital tracks and video content, I conducted an end-to-end sales analysis to optimise our upcoming marketing budget allocation. Operating in the digital entertainment industry, Chinook relies on a direct-to-consumer e-commerce model where customers purchase individual tracks and media items. Key performance indicators (KPIs) for our business include **Gross Revenue**, **Units Sold**, **Active Unique Customers**, and **Revenue per Customer**.
 
-This project evaluates historical customer purchasing behavior across media genres to answer a critical business question: *Which genre should receive primary marketing investment to maximize ROI without taking on unnecessary risk?*
+This project evaluates historical customer purchasing behaviour across media genres to answer a critical business question: *Which genre should receive primary marketing investment to maximise ROI without taking on unnecessary risk?*
 
 Insights and recommendations are provided on the following key areas:
-* **Category 1: Catalog Volume vs. Revenue Generation**
-* **Category 2: Customer Spend Normalization (Revenue per Customer)**
+* **Category 1: Catalogue Volume vs. Revenue Generation**
+* **Category 2: Customer Spend Normalisation (Revenue per Customer)**
 * **Category 3: Unit Pricing Impact across Media Types**
 * **Category 4: Sample Size Distribution & Statistical Reliability**
 
