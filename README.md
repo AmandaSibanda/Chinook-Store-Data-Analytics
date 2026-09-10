@@ -40,7 +40,7 @@ An initial surface-level view suggests doubling down entirely on high-volume mus
 3. **Broad Customer Reach:** A total of **59 unique customers** purchased Rock tracks, representing near-total penetration across Chinook's entire active buyer base.
 4. ** Catalogue Inventory Bias:** Rock also possesses the largest catalogue availability in our database. Because inventory volume naturally inflates total sales, gross revenue alone cannot be the sole deciding metric for future marketing spend.
 
-![Alt text](images/screenshot.png)
+![Alt text](https://github.com/AmandaSibanda/Chinook-Store-Data-Analytics/blob/9c08c91e68f392beb574394075b7521016eb183f/chinook_screenshots/Screenshot%202026-09-10%20123451.png)
 
 ---
 
