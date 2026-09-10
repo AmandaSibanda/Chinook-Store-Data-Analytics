@@ -70,7 +70,6 @@ An initial surface-level view suggests doubling down entirely on high-volume mus
 3. **Extreme Niche Categories:** Categories such as Comedy and Drama contain under **5 unique customers**, making any generalized conclusions statistically unreliable.
 4. **Risk Mitigation:** Identifying small sample sizes prevents the business from over-allocating capital to categories that lack broad market validation.
 
-![Category 4 Graph](https://via.placeholder.com/700x350.png?text=Customer+Sample+Size+Distribution+by+Genre)
 
 ---
 
