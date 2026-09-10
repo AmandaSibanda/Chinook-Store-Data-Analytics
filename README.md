@@ -60,7 +60,7 @@ An initial surface-level view suggests doubling down entirely on high-volume mus
 3. **Volume Disparity:** Despite higher unit prices, video content shows significantly lower overall unit volume (**65 units sold for TV Shows** vs **835 units for Rock**).
 4. **Margin vs. Volume Tradeoff:** High unit price items generate attractive revenue per transaction but face lower customer adoption across our current user base.
 
-![Alt text](images/screenshot.png)
+![Alt text](https://github.com/AmandaSibanda/Chinook-Store-Data-Analytics/blob/7a72e9934a5a8f7fa078ef257b77643aa5365df2/chinook_screenshots/Screenshot%202026-09-10%20122353.png)
 
 ---
 
