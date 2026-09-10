@@ -13,8 +13,6 @@ Insights and recommendations are provided on the following key areas:
 
 
 * Targeted SQL queries regarding various business questions can be found here: [SQL queries](SQL)
-* An interactive Tableau dashboard used to report and explore sales trends can be found here: `[Link to Tableau Public Dashboard]`
-
 ---
 
 ## Data Structure & Initial Checks
@@ -32,8 +30,6 @@ Chinook's main relational database structure consists of four primary tables use
 ### Overview of Findings
 An initial surface-level view suggests doubling down entirely on high-volume music categories like Rock due to overwhelming gross revenue dominance. However, deeper multi-variable analysis reveals that niche genres yield high revenue per customer primarily due to higher unit prices, but suffer from low sample sizes. For marketing leadership, **Rock remains the safest high-yield investment ($826.65 total revenue, $14.01 spend/customer across 59 active buyers)**, while categories like **TV Shows ($1.99 unit price, 19 buyers)** should be treated as experimental testing grounds rather than core budget priorities.
 
-![Executive Dashboard Snapshot](https://via.placeholder.com/800x400.png?text=Chinook+Executive+Sales+Overview+Dashboard)
-
 ---
 
 ## Insights Deep Dive
@@ -44,7 +40,7 @@ An initial surface-level view suggests doubling down entirely on high-volume mus
 3. **Broad Customer Reach:** A total of **59 unique customers** purchased Rock tracks, representing near-total penetration across Chinook's entire active buyer base.
 4. ** Catalogue Inventory Bias:** Rock also possesses the largest catalogue availability in our database. Because inventory volume naturally inflates total sales, gross revenue alone cannot be the sole deciding metric for future marketing spend.
 
-![Category 1 Graph](https://via.placeholder.com/700x350.png?text=Gross+Revenue+vs+Catalog+Volume+by+Genre)
+![Alt text](images/screenshot.png)
 
 ---
 
@@ -54,7 +50,7 @@ An initial surface-level view suggests doubling down entirely on high-volume mus
 3. **Niche Category Outliers:** Non-music categories like **TV Shows** generate **$4.92 per customer**, outperforming several traditional music genres despite serving far fewer total buyers.
 4. **Distinction Between Reach and Value:** Measuring revenue per customer prevents volume bias and highlights smaller categories that punch above their weight on a per-buyer basis.
 
-![Category 2 Graph](https://via.placeholder.com/700x350.png?text=Revenue+Per+Customer+by+Genre)
+![Alt text](https://github.com/AmandaSibanda/Chinook-Store-Data-Analytics/blob/4d50659742d807dd1a94b88afb8fc845cf17327d/chinook_screenshots/Screenshot%202026-09-10%20122353.png)
 
 ---
 
@@ -64,7 +60,7 @@ An initial surface-level view suggests doubling down entirely on high-volume mus
 3. **Volume Disparity:** Despite higher unit prices, video content shows significantly lower overall unit volume (**65 units sold for TV Shows** vs **835 units for Rock**).
 4. **Margin vs. Volume Tradeoff:** High unit price items generate attractive revenue per transaction but face lower customer adoption across our current user base.
 
-![Category 3 Graph](https://via.placeholder.com/700x350.png?text=Average+Unit+Price+vs+Units+Sold)
+![Alt text](images/screenshot.png)
 
 ---
 
